@@ -1,0 +1,410 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+ <title>Silicon Durbs</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <style>
+    body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 50px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#company">Logo</a>
+    </div>
+     <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">HOME</a></li>
+    <li class="dropdown" id="meetup">
+       <a class="dropdown-toggle"  data-toggle="dropdown" href="#">MEET UPS<span class="caret" ></span></a>
+       <ul class="dropdown-menu" style="background-color:#f4511e" >
+       <li><a href="meetups.html">- May</a></li>
+       <li><a href="meetup1.html">- June</a></li>
+       <li><a href="meetup2.html">- July</a></li> 
+	   <li><a href="meetup3.html">- August</a></li>
+	   <li><a href="meetup4.html">- September</a></li>
+	   <li><a href="meetup5.html">- October</a></li>
+	   <li><a href="meetup6.html">- November</a></li>
+	   <li><a href="meetup7.html">- December</a></li>
+       </ul>
+    </li>
+	<li class="dropdown" id="UNIVERSITY">
+       <a class="dropdown-toggle"  data-toggle="dropdown" href="#">UNIVERSITY<span class="caret" ></span></a>
+       <ul class="dropdown-menu" style="background-color:#f4511e" >
+       <li><a href="MUT.html">- M.U.T</a></li>
+       <li><a href="DUT.html">- D.U.T</a></li>
+       <li><a href="ukzn.html">- U.K.Z.N</a></li> 
+       </ul>
+    </li>
+	<li class="dropdown" id="SUMMIT">
+       <a class="dropdown-toggle"  data-toggle="dropdown" href="#">SUMMIT<span class="caret" ></span></a>
+       <ul class="dropdown-menu" style="background-color:#f4511e" >
+       <li><a href="summit.html">- FIN-Tech</a></li>
+       <li><a href="summit1.html">- Submenu 1-2</a></li>
+       </ul>
+    </li>
+<li class="dropdown" id="CONFERENCE">
+       <a class="dropdown-toggle"  data-toggle="dropdown" href="#">CONFERENCE<span class="caret" ></span></a>
+       <ul class="dropdown-menu" style="background-color:#f4511e" >
+       <li><a href="conference.html">- woman in Tech</a></li>
+       <li><a href="conference1.html">- innovaction Durban</a></li>
+       <li><a href="conference2.html">- World Tech day</a></li> 
+       </ul>
+    </li>
+<li class="dropdown" id="FORUMS">
+       <a class="dropdown-toggle"  data-toggle="dropdown" href="#">FORUMS<span class="caret" ></span></a>
+       <ul class="dropdown-menu" style="background-color:#f4511e" >
+       <li><a href="forums.html">- Cyber Security forum</a></li>
+       <li><a href="forums1.html">- Ecommernce and Digital forum</a></li>
+       <li><a href="forums2.html">- Smart Cities Forum</a></li>
+       <li><a href="forums3.html">- Developers and coders forum</a></li>
+       <li><a href="forums4.html">- Woman In-Tech forum</li>	
+       <li><a href="forums5.html">- Youth In-Tech forum</a></li>
+       <li><a href="forums6.html">- Tech Investors forum</a></li>
+       <li><a href="forums7.html">- Transport Tech and Ocean Tech forum</a></li>
+       <li><a href="forums8.html">- AgriTech forum</a></li>	   
+       </ul>
+    </li>
+<li class="dropdown" id="ROAD SHOWS">
+       <a class="dropdown-toggle"  data-toggle="dropdown" href="#">ROAD SHOWS<span class="caret" ></span></a>
+       <ul class="dropdown-menu" style="background-color:#f4511e" >
+       <li><a href="roadshows.html">- DURBAN</a></li>
+       <li><a href="roadshows1.html">- PINETOWN </a></li>
+       <li><a href="roadshows2.html">- PIETERMARITZBURG</a></li> 
+       </ul>
+    </li>	
+      </ul>
+    </div>
+  </div>
+  </div>
+</nav>
+
+<div id="company"  class="jumbotron text-center">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="img/images (8).jpeg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+		<h2 style="background-color:red;">M.U.T</h2> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="container-fluid text-center bg-grey" >
+<h2>student start up labs At : M.U.T</h2>
+<p>fdshhsdfhsh</p>
+<p>fdshhsdfhsh</p> 
+<p>fdshhsdfhsh</p>
+</div>
+
+<!-- Container (Speakers Section) --> 
+  <div class="container pl-3 pl-md-0 pr-0 py-3 py-md-5">
+    <div class="text-center title-module mb-4"><h2>OUR guest Speaker</h2></div>
+   
+              <div class="col-12 col-sm-6 col-md-12 text-center">
+                    <img src="img/mut.jpg" class="img-thumbnail" align="center"; alt="Cinque Terre" width="80" >
+                    <div class="text-center">
+                         <h3 class="member-name mb-1">About our speaker</h3>
+                         <p class="speaker-title">Head of Marketing bla bla bla</p>
+                    </div>
+              </div>
+
+ 
+    </div>
+<!-- Container (company involved Section) -->
+  <div class="container-fluid mdx-full-row speaker-overview-module" id="companyInvolved" style="background-color: ;  border-top: 1px solid #ccc;">
+    <div class="text-center  mb-4"><h2></h2><h2>Our partners</h2></div>
+    <div class="row align-items-center">
+        <div class="col-6 col-md-3 col-lg-3 mx-auto mdx-logo-col text-center py-3 px-1">
+          <img src="img/facebook.png" width="200" height="55" alt="logo-pepsico" style="width: 100%; max-width: 80px; height:auto;" >
+        </div>
+          <div class="w-100 d-none d-md-block"></div>
+        <div class="col-6 col-md-3 col-lg-3 mx-auto mdx-logo-col text-center py-3 px-1">
+          <img src="img/intel.png" width="431" height="285" alt="intel" style="width: 100%; max-width: 50px; height:auto;">
+        </div>
+        <div class="col-6 col-md-3 col-lg-3 mx-auto mdx-logo-col text-center py-3 px-1">
+          <img src="img/huawei.png" width="152" height="82" alt="SAP__152x82" style="width: 100%; max-width: 40px; height:auto;">
+        </div>
+        <div class="col-6 col-md-3 col-lg-3 mx-auto mdx-logo-col text-center py-3 px-1"> 
+          <img src="img/fenixintl.png" width="100" height="100" alt="unilever" style="width: 100%; max-width: 30px; height:auto;" >          
+        </div>
+          <div class="w-100 d-none d-md-block"></div>
+    </div>
+ </div>
+
+<!-- Container (sponers Section) -->
+<div class="container-fluid mdx-full-row speaker-overview-module bg-grey" id="sponers" style="background-color: ;  border-top: 1px solid #ccc;   ">
+      <div class="text-center  mb-4"><h2>Our sponers</h2></div>
+  <br>
+  <div class="row align-items-center">
+        <div class="col-6 col-md-3 col-lg-3 mx-auto mdx-logo-col text-center py-3 px-1">
+          <img src="img/fenixintl.png" width="200" height="55" alt="logo-pepsico" style="width: 100%; max-width: 80px; height:auto;" >
+        </div>
+          <div class="w-100 d-none d-md-block"></div>
+        <div class="col-6 col-md-3 col-lg-3 mx-auto mdx-logo-col text-center py-3 px-1">
+          <img src="img/huawei.png" width="431" height="285" alt="intel" style="width: 100%; max-width: 50px; height:auto;">
+        </div>
+        <div class="col-6 col-md-3 col-lg-3 mx-auto mdx-logo-col text-center py-3 px-1">
+          <img src="img/intel.png" width="152" height="82" alt="SAP__152x82" style="width: 100%; max-width: 40px; height:auto;">
+        </div>
+        <div class="col-6 col-md-3 col-lg-3 mx-auto mdx-logo-col text-center py-3 px-1"> 
+          <img src="img/facebook.png" width="100" height="100" alt="unilever" style="width: 100%; max-width: 30px; height:auto;" >          
+        </div>
+          <div class="w-100 d-none d-md-block"></div>
+    </div>
+</div>
+
+<!-- Container ( footer Section) -->
+<footer class="container-fluid text-center">
+  <a href="#company" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  
+<p>Events site By <a href="https://www.silicondurbs.com" title="Visit w3schools">www.silicondurbs.com</a></p>
+</footer>
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+  
+</body>
+
+</html>
